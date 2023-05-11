@@ -1,31 +1,11 @@
 <?php
-
 /**
- * Theme Header Template - Marmalil
+ * Header Navigation template
  * 
  * @package Marmalil
  */
-?>
 
-<!-- add logo for home and links to design and development -->
-<!DOCTYPE html>
-<html lang="<?php language_attributes();?>">
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php add_theme_support( 'title-tag') ?></title>
-    <?php wp_head();?>
-</head>
-<body <?php body_class();?>>
-    <?php 
-        if ( function_exists( 'wp_body_open' ) ) {
-            wp_body_open();
-        }
-    ?>
-    <div id="page" class="site">
-        <header id="masterhead" class="site-header" role="banner">
-            <nav class="navbar navbar-expand-custom navbar-mainbg">
+<nav class="navbar navbar-expand-custom navbar-mainbg">
                 <a class="navbar-brand navbar-logo" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars text-white"></i>
@@ -51,6 +31,3 @@
                     </ul>
                 </div>
             </nav>
-        </header>
-        <div id="content" class="site-content">
-<!--end tag in footer-->
