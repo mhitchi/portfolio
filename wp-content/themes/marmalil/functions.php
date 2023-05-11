@@ -7,8 +7,8 @@
  * 
  * 
  */
-print_r( get_template_directory() );
-wp_die();
+// print_r( get_template_directory() );
+// wp_die();
 
  function marmalil_enqueue_scripts() {
    //register styles 
@@ -16,8 +16,8 @@ wp_die();
    wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/assets/src/library/css/bootstrap.min.css', [], false, 'all' );
 
    //register scripts
-   wp_register_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', [], filemtime( get_template_directory() . '/assets/js/main.js'), true );
-   wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false , true );
+   wp_register_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', [], filemtime( get_template_directory() . '/assets/js/main.js' ), true );
+   wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/assets/src/library/js/bootstrap.min.js', [ 'jquery' ], false , true );
     // wp_enqueue_style( 'blog-css', get_template_directory_uri() . 'blog.css', ['main-css']);
  
     //register style first, then enqueue conditionally, like on a certain page
@@ -30,5 +30,5 @@ wp_die();
    wp_enqueue_script( 'bootstrap-js' );
 }
 
- add_action( 'wp_enqueue_scripts', 'marmalil_enqueue_scripts')
+ add_action( 'wp_enqueue_scripts', 'marmalil_enqueue_scripts');
  ?>
