@@ -10,6 +10,12 @@
 // print_r( get_template_directory() );
 // wp_die();
 
+if ( ! defined( 'MARMALIL_DIR_PATH' ) ) {
+   define( 'MARMALIL_DIR_PATH', untrailingslashit( get_template_directory() ) );
+}
+
+require_once MARMALIL_DIR_PATH . './inc/helpers/autoloader.php';
+
  function marmalil_enqueue_scripts() {
    //register styles 
    wp_register_style( 'main-css', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
