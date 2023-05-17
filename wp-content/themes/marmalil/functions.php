@@ -16,6 +16,11 @@ if ( ! defined( 'MARMALIL_DIR_PATH' ) ) {
 
 require_once MARMALIL_DIR_PATH . './inc/helpers/autoloader.php';
 
+function marmalil_get_theme_instance() {
+   \MARMALIL_THEME\Inc\MARMALIL_THEME::get_instance();
+}
+marmalil_get_theme_instance();
+
  function marmalil_enqueue_scripts() {
    //register styles 
    wp_register_style( 'main-css', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
