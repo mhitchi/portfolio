@@ -22,6 +22,7 @@
     protected function setup_hooks() {
         // actions and filter
         add_action( 'wp_enqueue_scripts', [ $this, 'register_styles' ] );
+        add_action( 'wp_enqueue_scripts', [ $this, 'register_scripts' ] );
     }
 
     public function register_styles() {
@@ -34,6 +35,11 @@
     }
 
     public function register_scripts() {
-
+         //register scripts
+        wp_register_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', [], filemtime( get_template_directory() . '/assets/js/main.js' ), true );
+        wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/assets/src/library/js/bootstrap.min.js', [ 'jquery' ], false , true );
+        //enqueue scripts
+        wp_enqueue_script( 'main-js' );
+        wp_enqueue_script( 'bootstrap-js' );
     }
  }
