@@ -16,10 +16,22 @@
 
     protected function __construct() {
         // load other classes.
-        $this->set_hooks();
+        $this->setup_hooks();
     }
 
-    protected function set_hooks() {
+    protected function setup_hooks() {
         // actions and filter
+        add_action( 'wp_enqueue_scripts', [ $this, 'register_styles' ] );
+    }
+
+    public function register_styles() {
+         //register styles 
+        wp_register_style( 'main-css', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
+        wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/assets/src/library/css/bootstrap.min.css', [], false, 'all' );
+
+    }
+
+    public function register_scripts() {
+
     }
  }
