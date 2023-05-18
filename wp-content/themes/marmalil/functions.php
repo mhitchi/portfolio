@@ -34,9 +34,9 @@ marmalil_get_theme_instance();
     //register style first, then enqueue conditionally, like on a certain page
    // if (is_archive() ) {wp_enqueue_style('main-css');}
 
-   //enqueue styles and scripts
-   wp_enqueue_style( 'main-css' );
-   wp_enqueue_style( 'bootstrap-css' );
+   // //enqueue styles and scripts
+   // wp_enqueue_style( 'main-css' );
+   // wp_enqueue_style( 'bootstrap-css' );
    wp_enqueue_script( 'main-js' );
    wp_enqueue_script( 'bootstrap-js' );
 }
