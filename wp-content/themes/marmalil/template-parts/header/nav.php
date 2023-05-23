@@ -7,7 +7,13 @@
 ?>
 <!--https://codepen.io/piyushpd139/pen/gOYvZPG-->
 <nav class="navbar navbar-expand-custom navbar-mainbg">
-                <a class="navbar-brand navbar-logo" href="#">Navbar</a>
+                <!-- trade for dynamic logo <a class="navbar-brand navbar-logo" href="#">Navbar</a> -->
+                <?php if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                } else {
+                    echo '<a class="navbar-brand navbar-logo" href="#"><img src="/wp-content/uploads/2023/05/portfolio_icon.png" alt="Explore Manning Hitchings portfolio"/></a>';
+                }
+                ?>
                 <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars text-white"></i>
                 </button>
