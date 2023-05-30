@@ -50,6 +50,8 @@
          'default-image' => get_template_directory_uri() . 'http://localhost:8888/wordpress/wp-content/uploads/2023/05/letters-print-1.webp',
          'default-repeat'=> 'no-repeat',
       ] );
+
+      add_theme_support( 'post_thumbnails' );
    }
 
     
