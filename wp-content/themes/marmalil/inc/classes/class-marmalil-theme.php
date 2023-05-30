@@ -51,7 +51,9 @@
          'default-repeat'=> 'no-repeat',
       ] );
 
-      add_theme_support( 'post_thumbnails' );
+      add_theme_support( 'post-thumbnails' );
+
+      add_theme_support( 'customze-selective-refresh-widgets' );
    }
 
     
