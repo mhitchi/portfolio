@@ -54,6 +54,8 @@
       add_theme_support( 'post-thumbnails' );
 
       add_theme_support( 'customze-selective-refresh-widgets' );
+
+      add_theme_support( 'automatic-feed-links' );
    }
 
     
