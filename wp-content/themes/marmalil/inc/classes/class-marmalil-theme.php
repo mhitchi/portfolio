@@ -56,6 +56,19 @@
       add_theme_support( 'customze-selective-refresh-widgets' );
 
       add_theme_support( 'automatic-feed-links' );
+
+      add_theme_support(
+         'html5',
+         [
+            'search-form',
+            'comment-form',
+            'gallery',
+            'caption',
+            'script',
+            'style',
+
+         ]
+         );
    }
 
     
