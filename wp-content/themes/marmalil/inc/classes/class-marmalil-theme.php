@@ -68,7 +68,12 @@
             'style',
 
          ]
-         );
+      );
+
+      add_editor_style();
+      add_theme_support( 'wp-block-styles' );
+
+
    }
 
     
