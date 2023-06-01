@@ -33,6 +33,9 @@
     }
 
    public function setup_theme() {
+
+      // here's where we'll add translation support for other languages
+      
       /*worked great*/
       add_theme_support( 'title-tag' );
 
@@ -74,6 +77,12 @@
       add_theme_support( 'wp-block-styles' );
 
       add_theme_support( 'align-wide' );
+
+      // DEFINE CONTENT WIDTH
+      global $content_width;
+      if ( ! isset( $content_width ) ) [
+         $content_width = 1200;
+      ]
    }
 
     
