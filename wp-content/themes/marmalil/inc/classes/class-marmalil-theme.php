@@ -19,6 +19,7 @@
       //load class
 
       Assets::get_instance();
+      Menus::get_instance();
 
       $this->setup_hooks();
 
@@ -35,7 +36,7 @@
    public function setup_theme() {
 
       // here's where we'll add translation support for other languages
-      
+
       /*worked great*/
       add_theme_support( 'title-tag' );
 
