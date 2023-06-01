@@ -28,8 +28,8 @@
 
     public function register_menus() {
         register_nav_menus ( [
-            'marmalil-header-menu' => __( 'Header Menu' ),
-            'marmalil-footer-menu' => __( 'Extra Menu' )
+            'marmalil-header-menu' => esc_html__( 'Header Menu', 'marmalil' ),
+            'marmalil-footer-menu' => esc_html__( 'Footer Menu', 'marmalil' )
         ]);
     }
  }
