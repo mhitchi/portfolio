@@ -38,3 +38,12 @@
                     </ul>
                 </div>
             </nav>
+
+            <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'marmalil-header-menu',
+                        'container_class' => 'my_extra_menu_container_class'
+                    )
+                )
+            ?>
