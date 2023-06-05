@@ -39,5 +39,8 @@
 
         // get object id by location
         $menu_id = $locations[$location];
+
+        // if $menu_id isn't empty, then return it, or else return null
+        return ! empty( $menu_id ) ? $menu_id : '';
     }
  }
