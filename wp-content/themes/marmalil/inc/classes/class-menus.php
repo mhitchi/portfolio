@@ -3,7 +3,7 @@
  * Register menus
  * 
  * @package Marmalil
- * 
+ * COME BACK TO THIS - 22
  */
 
  namespace MARMALIL_THEME\Inc;
@@ -31,5 +31,13 @@
             'marmalil-header-menu' => esc_html__( 'Header Menu', 'marmalil' ),
             'marmalil-footer-menu' => esc_html__( 'Footer Menu', 'marmalil' )
         ]);
+    }
+
+    public function get_menu_id( $location ) {
+        // get all locations available
+        $locations = get_nav_menu_locations();
+
+        // get object id by location
+        $menu_id = $locations[$location];
     }
  }
