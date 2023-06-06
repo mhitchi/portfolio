@@ -82,7 +82,7 @@
       // DEFINE CONTENT WIDTH
       global $content_width;
       if ( ! isset( $content_width ) ) [
-         $content_width = 1200;
+         $content_width = 1200
       ]
    }
 

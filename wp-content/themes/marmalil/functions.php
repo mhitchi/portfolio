@@ -18,7 +18,7 @@ if ( ! defined( 'MARMALIL_DIR_URI' ) ) {
    define( 'MARMALIL_DIR_URI', untrailingslashit( get_template_directory_uri() ) );
 }
 
-require_once MARMALIL_DIR_PATH . './inc/helpers/autoloader.php';
+require_once MARMALIL_DIR_PATH . '/inc/helpers/autoloader.php';
 
 function marmalil_get_theme_instance() {
    \MARMALIL_THEME\Inc\MARMALIL_THEME::get_instance();
