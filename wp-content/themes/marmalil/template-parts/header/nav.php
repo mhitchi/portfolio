@@ -6,7 +6,9 @@
  */
 
  $menu_class = \Marmalil_Theme\Inc\Menus::get_instance();
- $menu_class->get_menu_id( 'marmalil-header-menu');
+ $header_menu_id = $menu_class->get_menu_id( 'marmalil-header-menu');
+
+ $header_menus = wp_get_nav_menu_items( $header_menu_id );
 ?>
 <!--https://codepen.io/piyushpd139/pen/gOYvZPG-->
 <nav class="navbar navbar-expand-custom navbar-mainbg">
