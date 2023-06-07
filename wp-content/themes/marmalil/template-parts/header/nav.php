@@ -5,6 +5,7 @@
  * @package Marmalil
  */
 
+ //inside the loop
  $menu_class = \Marmalil_Theme\Inc\Menus::get_instance();
  $header_menu_id = $menu_class->get_menu_id( 'marmalil-header-menu');
 
@@ -30,7 +31,7 @@
                         <?php
                             foreach ( $header_menus as $menu_item ) {
                                 if ( ! $menu_item->menu_item_parent ) {
-
+                                    $child_menu_items = $menu_class->get_child_menu_items( $header_menus, $menu_item->ID );
                                 }
                             }
                         ?>

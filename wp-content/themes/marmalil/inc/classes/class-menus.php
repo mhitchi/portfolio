@@ -3,9 +3,10 @@
  * Register menus
  * 
  * @package Marmalil
- * COME BACK TO THIS - 22
+ * 
  */
 
+ //outside the loop
  namespace MARMALIL_THEME\Inc;
 
  use MARMALIL_THEME\Inc\Traits\Singleton;
@@ -44,7 +45,7 @@
         return ! empty( $menu_id ) ? $menu_id : '';
     }
 
-    public function get_child_menu_item( $menu_array, $parent_id ) {
+    public function get_child_menu_items( $menu_array, $parent_id ) {
         $child_menus = [];
         if (! empty( $menu_array ) && is_array( $menu_array ) ) {
             for ( $menu_array as $menu ) {
