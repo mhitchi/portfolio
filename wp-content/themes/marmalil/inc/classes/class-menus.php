@@ -43,4 +43,17 @@
         // if $menu_id isn't empty, then return it, or else return null
         return ! empty( $menu_id ) ? $menu_id : '';
     }
+
+    public function get_child_menu_item( $menu_array, $parent_id ) {
+        $child_menus = [];
+        if (! empty( $menu_array ) && is_array( $menu_array ) ) {
+            for ( $menu_array as $menu ) {
+                if ( intval( $menu->menu_item_parent ) === $parent_id ) {
+                    array_push( $child_menus, $menu );
+                }
+            }
+        }
+        return $child_menus;
+    }
+
  }
