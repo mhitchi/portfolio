@@ -37,16 +37,19 @@
                                     if ( ! $has_children ) {
                                         ?>
                                             <li class="nav-item">
-                                                 <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i>Link</a>
+                                                 <a class="nav-link" href="<?php echo esc_url( $menu_item->url ); ?>">
+                                                 <i class="fas fa-tachometer-alt"></i>
+                                                    <?php echo esc_html( $menu_item->title ); ?>
+                                                </a>
                                             </li>
                                         <?php
                                     } else {
                                         ?>
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"><i class="fas fa-tachometer-alt"></i>Dropdown</a>
+                                                <a class="nav-link dropdown-toggle" href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button"><i class="fas fa-tachometer-alt"></i>Dropdown</a>
                                             </li>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Link"</a>
+                                                <a class="dropdown-item" href="#">Link</a>
                                             </div>
                                         <?php
                                     }
