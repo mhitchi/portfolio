@@ -32,6 +32,24 @@
                             foreach ( $header_menus as $menu_item ) {
                                 if ( ! $menu_item->menu_item_parent ) {
                                     $child_menu_items = $menu_class->get_child_menu_items( $header_menus, $menu_item->ID );
+                                    $has_children = ! empty( $child_menu_items ) && is_array( $child_menu_items );
+
+                                    if ( ! $has_children ) {
+                                        ?>
+                                            <li class="nav-item">
+                                                 <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i>Link</a>
+                                            </li>
+                                        <?php
+                                    } else {
+                                        ?>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"><i class="fas fa-tachometer-alt"></i>Dropdown</a>
+                                            </li>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Link"</a>
+                                            </div>
+                                        <?php
+                                    }
                                 }
                             }
                         ?>
