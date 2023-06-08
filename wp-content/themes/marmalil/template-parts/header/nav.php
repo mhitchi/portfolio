@@ -46,10 +46,21 @@
                                     } else {
                                         ?>
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button"><i class="fas fa-tachometer-alt"></i>Dropdown</a>
+                                                <a class="nav-link dropdown-toggle" href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button">
+                                                    <i class="fas fa-tachometer-alt"></i>
+                                                    <?php echo esc_html( $menu_item->title ); ?>
+                                                </a>
                                             </li>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">Link</a>
+                                                <?php
+                                                    foreach ( $child_menu_items as $child_menu_item ) {
+                                                        ?>
+                                                        <a class="dropdown-item" href="<?php echo esc_url( $child_menu_item->url ); ?>">
+                                                            <?php echo esc_url( $child_menu_item->title ); ?>
+                                                        </a>
+                                                        <?php
+                                                    }
+                                                ?>
                                             </div>
                                         <?php
                                     }
