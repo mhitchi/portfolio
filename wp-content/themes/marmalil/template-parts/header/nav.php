@@ -28,6 +28,7 @@
                     if ( ! empty( $header_menus ) && is_array( $header_menus ) ) {
                     ?>
                     <ul class="navbar-nav ml-auto">
+                        <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                         <?php
                             foreach ( $header_menus as $menu_item ) {
                                 if ( ! $menu_item->menu_item_parent ) {
