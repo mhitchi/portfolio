@@ -17,6 +17,7 @@
                 <?php if ( function_exists( 'the_custom_logo' ) ) {
                     the_custom_logo();
                 } else {
+                    // FIX
                     echo '<a class="navbar-brand navbar-logo" href="#"><img src="http://localhost:8888/wordpress/wp-content/uploads/2023/05/portfolio_icon.png" alt="Explore Manning Hitchings portfolio"/></a>';
                 }
                 ?>
@@ -46,8 +47,9 @@
                                         <?php
                                     } else {
                                         ?>
+                                        <!-- FIX -->
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button">
+                                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button">
                                                     <i class="fas fa-tachometer-alt"></i>
                                                     <?php echo esc_html( $menu_item->title ); ?>
                                                 </a>
