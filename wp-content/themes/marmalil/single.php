@@ -1,13 +1,13 @@
 <?php
 /**
  * 
- * Main template
+ * Single post template
  * 
  * @package marmalil
  */
 
  get_header();
 ?>
- <div>Default Page</div>
+ <div>Single Post</div>
 
  <?php get_footer() ?>
