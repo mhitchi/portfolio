@@ -6,7 +6,9 @@
  */
 ?>
 
-<p>Footer</p>
+<div class="footer">
+    <p>Footer</p>
+</div>
 </div><!--end tag for page content div-->
 </div><!--end tag for page div-->
 <!-- add logo for home and links to design and development -->

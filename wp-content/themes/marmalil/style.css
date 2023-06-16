@@ -22,6 +22,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body{
 	font-family: 'Roboto', sans-serif;
 }
+#page {
+	background: rgb(195,86,101);
+	background: radial-gradient(400px, rgba(195,86,101,0.5) 3%, rgba(250,245,237,1) 100%);
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -29,8 +33,14 @@ body{
 i {
 	margin-right: 10px;
 }
+.footer {
+	position:fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
 /*----------bootstrap-navbar-css------------*/
-.navbar-logo{
+/* .navbar-logo{
 	padding: 15px;
 	color: #fff;
 }
@@ -183,5 +193,5 @@ i {
 		bottom: -25px;
 		left: -25px;
 	}
-}
+} */
 /*end navbar*/
