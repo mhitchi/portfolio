@@ -11,7 +11,7 @@
  <div id="primary">
     <main id="main" class="site-main mt-5" role="main">
         <?php
-            if ( have_posts() ) {
+            if ( have_posts() ) :
                 ?>
                 <div class="container">
                     <?php 
@@ -41,7 +41,8 @@
                         <div class="col-lg-4 col-md-6 col-sm-12">
                     <?php
                             }
-                         get_template_part( 'template-parts/content.php');
+                        /*.php file extention not needed on this next part*/
+                         get_template_part( 'template-parts/content');
                     
                             //increment index
                             $index++;
@@ -59,7 +60,11 @@
                     plan: https://codepen.io/eorlandno/pen/LYYpypz
                 </div>
                 <?php
-            }
+
+            else :
+                /*.php file extention not needed on this next part*/
+                get_template_part( 'template-parts/content-none' );
+            endif;
         ?>
 
     </main>
