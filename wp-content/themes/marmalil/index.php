@@ -41,13 +41,8 @@
                         <div class="col-lg-4 col-md-6 col-sm-12">
                     <?php
                             }
-            ?>              <div class="post_card">
-                                <h2><?php the_title(); ?></h2>
-                                <div class="excerpt">
-                                    <p><?php the_excerpt(); ?></p>
-                                </div>
-                            </div>
-                    <?php
+                         get_template_part( 'template-parts/content.php');
+                    
                             //increment index
                             $index++;
 
