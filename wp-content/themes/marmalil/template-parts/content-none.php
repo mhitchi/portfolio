@@ -42,6 +42,12 @@
                 ?>
                     <p><?php exc_html_e( 'Sorry, but nothing matched your search. Please try again.' ); ?></p>
                 <?php
+                get_search_form();
+            } else {
+                ?>
+                    <p><?php exc_html_e( 'Sorry, we cannot find that page. Perhaps search could help.' ); ?></p>
+                <?php
+                get_search_form();
             }
         ?>
     </div>
