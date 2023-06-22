@@ -33,11 +33,15 @@
                                     ]
                                 ]
                             ),
-                            esc_url( admin_url( 'post-new.php' ) ))
+                            esc_url( admin_url( 'post-new.php' ) )
                         )
                     ?>
                 </p>
         <?php
+            } elseif ( is_search() ) {
+                ?>
+                    <p><?php exc_html_e( 'Sorry, but nothing matched your search. Please try again.' ); ?></p>
+                <?php
             }
         ?>
     </div>
