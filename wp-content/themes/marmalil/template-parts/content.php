@@ -2,13 +2,14 @@
 /**
  * Content template
  * 
- * @package Marmalil
+ * @package marmalil
  */
-*/
 ?>
-<div class="post_card">
-    <h2><?php the_title(); ?></h2>
-    <div class="excerpt">
-        <p><?php the_excerpt(); ?></p>
-    </div>
-</div>
+<article id="post=<?php the_ID(); ?>" <?php post_class( 'mb-5' ); ?>>
+    <?php  
+        get_template_part( 'template-parts/components/blog/entry-header' );
+        get_template_part( 'template-parts/components/blog/entry-meta' );
+        get_template_part( 'template-parts/components/blog/entry-content' );
+        get_template_part( 'template-parts/components/blog/entry-footer' );
+    ?>
+</article>
