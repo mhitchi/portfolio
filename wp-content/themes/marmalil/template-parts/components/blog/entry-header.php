@@ -19,6 +19,14 @@
             </a>
          </div>
          <?php
+         the_post_custom_thumbnail(
+            $the_post_id,
+            'featured-large',
+            [
+                'sizes' => '(max-width: 590px) 590px, 425px',
+                'class' => 'ft-img-lg thumbnail'
+            ]
+         )
     }
 
     ?>

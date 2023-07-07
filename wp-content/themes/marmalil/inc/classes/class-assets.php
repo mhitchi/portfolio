@@ -15,6 +15,9 @@
 
     protected function __construct() {
         // load other classes.
+        Assets::get_instance();
+
+        // load hooks
         $this->setup_hooks();
     }
 
