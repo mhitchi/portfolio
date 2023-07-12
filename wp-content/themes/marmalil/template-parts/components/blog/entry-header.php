@@ -23,7 +23,7 @@
             $the_post_id,
             'featured-large',
             [
-                'sizes' => '(max-width: 590px) 590px, 425px',
+                'sizes' => '(max-width: 280px) 280px, 280px',
                 'class' => 'ft-img-lg thumbnail'
             ]
          )
