@@ -57,7 +57,9 @@
 
       add_theme_support( 'post-thumbnails' );
 
-      add_theme_support( 'customze-selective-refresh-widgets' );
+      add_image_size( 'featured-large', 280, 200, true );
+
+      add_theme_support( 'customize-selective-refresh-widgets' );
 
       add_theme_support( 'automatic-feed-links' );
 
