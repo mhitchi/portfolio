@@ -21,7 +21,7 @@
          <?php
          the_post_custom_thumbnail(
             $the_post_id,
-            'featured-large',
+            'featured-thumbnail',
             [
                 'sizes' => '(max-width: 280px) 280px, 280px',
                 'class' => 'ft-img-lg thumbnail'
