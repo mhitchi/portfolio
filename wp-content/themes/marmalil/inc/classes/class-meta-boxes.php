@@ -32,12 +32,24 @@
         $screens = [ 'post' ];
         foreach ( $screens as $screen ) {
             add_meta_box(
-                'wporg_box_id',          // unique id
-                'Custom Meta Box Title', // box title
-                'wporg_custom_box_html', // content callback, must be of typle callable
-                $screen                  // post type
+                'hige-page-title',                   // unique id
+                __( 'Hide page title', 'marmalil' ), // box title
+                [ $this, 'custom_meta_box_html' ],   // content callback, must be of typle callable
+                $screen                              // post type
             );
         }
+    }
+
+    public function custom_meta_box_html( $post ) {
+        $value = get_post_meta( $post->ID, '_wporg_meta_key', true );
+        ?>
+        <label for="wporg_field">Description</label>
+        <select name="wporg_field" id="wporg_field" class="postbox">
+            <option value="">Select something...</option>
+            <option value="something" <?php selected($value, 'something' ); ?>>Else</option>
+            <option value="else" <?php selected($value, 'else' ); ?>>Else</option>
+        </select>
+        <?php
     }
 
  }
