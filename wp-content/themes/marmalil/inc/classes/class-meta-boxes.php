@@ -35,7 +35,8 @@
                 'hige-page-title',                   // unique id
                 __( 'Hide page title', 'marmalil' ), // box title
                 [ $this, 'custom_meta_box_html' ],   // content callback, must be of typle callable
-                $screen                              // post type
+                $screen,                             // post type
+                'side'                               // box placement
             );
         }
     }
