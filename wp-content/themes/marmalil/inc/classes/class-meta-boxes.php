@@ -41,13 +41,17 @@
     }
 
     public function custom_meta_box_html( $post ) {
-        $value = get_post_meta( $post->ID, '_wporg_meta_key', true );
+        $value = get_post_meta( $post->ID, '_hide_page_title', true );
         ?>
-        <label for="wporg_field">Description</label>
-        <select name="wporg_field" id="wporg_field" class="postbox">
-            <option value="">Select something...</option>
-            <option value="something" <?php selected($value, 'something' ); ?>>Else</option>
-            <option value="else" <?php selected($value, 'else' ); ?>>Else</option>
+        <label for="marmalil-field"><?php esc_html_e( 'Hide the page title' ); ?></label>
+        <select name="marmalil-field" id="marmalil-field" class="postbox">
+            <option value=""><?php esc_html_e( 'Select', 'marmalil' );?> </option>
+            <option value="yes" <?php selected($value, 'yes' ); ?>>
+                <?php esc_html_e( 'Yes', 'marmalil' );?>
+            </option>
+            <option value="no" <?php selected($value, 'no' ); ?>>
+                <?php esc_html_e( 'No', 'marmalil' );?>
+            </option>
         </select>
         <?php
     }
