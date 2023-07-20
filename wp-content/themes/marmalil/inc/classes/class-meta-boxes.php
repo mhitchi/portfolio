@@ -45,7 +45,7 @@
         $value = get_post_meta( $post->ID, '_hide_page_title', true );
         ?>
         <label for="marmalil-field"><?php esc_html_e( 'Hide the page title' ); ?></label>
-        <select name="marmalil-field" id="marmalil-field" class="postbox">
+        <select name="marmalil_hide_title_field" id="marmalil-field" class="postbox">
             <option value=""><?php esc_html_e( 'Select', 'marmalil' );?> </option>
             <option value="yes" <?php selected($value, 'yes' ); ?>>
                 <?php esc_html_e( 'Yes', 'marmalil' );?>
@@ -58,11 +58,11 @@
     }
 
     public function save_post_meta_data( $post_id ) {
-        if(array_key_exists('wpord_field', $_POST)) {
+        if(array_key_exists('marmalil_hide_title_field', $_POST)) {
             update_post_meta(
                 $post_id,
-                '_wporg_meta_key',
-                $_POST['wporg_field']
+                '_hide_page_title',
+                $_POST['marmalil_hide_title_field']
             );
         }
     }
