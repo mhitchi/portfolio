@@ -57,4 +57,13 @@
         <?php
     }
 
+    public function save_post_meta_data( $post_id ) {
+        if(array_key_exists('wpord_field', $_POST)) {
+            update_post_meta(
+                $post_id,
+                '_wporg_meta_key',
+                $_POST['wporg_field']
+            );
+        }
+    }
  }
