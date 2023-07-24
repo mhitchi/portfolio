@@ -43,7 +43,7 @@ if ( is_single() || is_page() ) {
     );
 } else {
     printf( 
-        '<h2 class="entry-title mb-3"><a href="%1$s">%2$s</a></h2>',
+        '<h2 class="entry-title mb-3"><aclass="text-dark" href="%1$s">%2$s</a></h2>',
         esc_url( get_the_permalink() ),
         // sanitizes
         wp_kses_post( get_the_title() )
