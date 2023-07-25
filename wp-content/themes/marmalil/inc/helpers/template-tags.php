@@ -29,3 +29,11 @@ function get_the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', 
 function the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $additional_attributes = [], ) {
     echo get_the_post_thumbnail( $post_id, $size, $additional_attributes );
 }
+
+function marmalil_posted_on() {
+    $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' )) {
+        $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+    }
+}
