@@ -46,3 +46,16 @@ function marmalil_posted_on() {
     esc_attr( get_the_modified_date() ),
 );
 }
+
+function marmalil_the_excerpt( $trim_character_count = 0 ) {
+    if ( ! has_excerpt() || 0 === $trim_character_count ) {
+        the_excerpt();
+        return;
+    }
+
+    $excerpt = wp_strip_all_tags( get_the_excerpt() );
+    $excerpt = substr( $excerpt, 0, $trim_character_count );
+    $excerpt = substr( $excerpt, 0, strpos( $excerpt, ' ' ));
+
+    echo $excerpt . "[...]";
+}
