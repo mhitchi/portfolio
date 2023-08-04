@@ -25,7 +25,7 @@
             )
         );
     } else {
-        marmalil_the_excerpt();
+        marmalil_the_excerpt(200);
     }
     ?>
 </div>
