@@ -27,5 +27,12 @@
     } else {
         marmalil_the_excerpt(200);
     }
+
+    wp_link_pages(
+        [
+            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marmalil' ),
+            'after' => '</div>',
+        ]
+        );
     ?>
 </div>
