@@ -22,17 +22,18 @@
                     ] 
                         ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
                 )
-            )
+            );
+            wp_link_pages(
+                [
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marmalil' ),
+                    'after' => '</div>',
+                ]
+                );
         );
     } else {
         marmalil_the_excerpt(200);
     }
 
-    wp_link_pages(
-        [
-            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'marmalil' ),
-            'after' => '</div>',
-        ]
-        );
+    
     ?>
 </div>
