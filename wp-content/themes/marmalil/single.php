@@ -34,6 +34,7 @@
                 /*.php file extention not needed on this next part*/
                 get_template_part( 'template-parts/content-none' );
                     endwhile;
+                    marmalil_pagination();
         ?>
 
     </main>

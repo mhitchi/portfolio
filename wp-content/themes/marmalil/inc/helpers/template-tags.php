@@ -76,3 +76,8 @@ function marmalil_the_excerpt( $trim_character_count = 0 ) {
 
     echo $excerpt . "...";
 }
+
+function marmalil_pagination() {
+    previous_post_link();
+    next_post_link();
+}
