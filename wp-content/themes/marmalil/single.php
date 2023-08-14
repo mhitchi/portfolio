@@ -34,8 +34,14 @@
                 /*.php file extention not needed on this next part*/
                 get_template_part( 'template-parts/content-none' );
                     endwhile;
-                    previous_post_link();
-                    next_post_link();
+                    ?>
+                    <div class="container">
+                    <?php
+                        previous_post_link();
+                        next_post_link();
+                    ?>
+                    </div>
+                    <?php
         ?>
 
     </main>
