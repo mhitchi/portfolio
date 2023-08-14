@@ -78,6 +78,18 @@ function marmalil_the_excerpt( $trim_character_count = 0 ) {
 }
 
 function marmalil_pagination() {
-    previous_post_link();
-    next_post_link();
+    $args = [
+        
+    ];
+    $allowed_tags = [
+        'span' => [
+            'class' => []
+        ],
+        'a' => [
+            'class' => [],
+            'href' => [],
+        ]
+    ];
+
+    printf('<nav class="marmalil-pagination clearfix">%s</nav>', wp_kses( paginate_link( $args ), $allowed_tags ) )
 }
