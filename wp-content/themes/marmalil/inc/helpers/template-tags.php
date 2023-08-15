@@ -79,7 +79,8 @@ function marmalil_the_excerpt( $trim_character_count = 0 ) {
 
 function marmalil_pagination() {
     $args = [
-        
+        'before_page_number' => '<span class="btn border border-secondary mr-2 mb-2">',
+        'after_page_number' => '</span>',
     ];
     $allowed_tags = [
         'span' => [
