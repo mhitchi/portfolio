@@ -39,6 +39,10 @@ i {
 	width: 100%;
 	text-align: center;
 }
+.page-numbers.current > span {
+	background-color: gray;
+	color: #fff;
+}
 /*----------bootstrap-navbar-css------------*/
 /* .navbar-logo{
 	padding: 15px;
