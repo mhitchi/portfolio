@@ -22,7 +22,7 @@
 		parent::__construct(
 			'clock_widget', // Base ID
 			'Clock', // Name
-			[ 'description' => __( 'Clock Widget', 'aquila' ), ] // Args
+			[ 'description' => __( 'Clock Widget', 'marmalil' ), ] // Args
 		);
 	}
 
@@ -58,11 +58,11 @@
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
 		} else {
-			$title = __( 'New title', 'aquila' );
+			$title = __( 'New title', 'marmalil' );
 		}
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title:', 'aquila' ); ?></label>
+			<label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title:', 'marmalil' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
 			       name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"
 			       value="<?php echo esc_attr( $title ); ?>"/>
