@@ -1,12 +1,16 @@
 {
-  "name": "assets",
+  "name": "marmalil",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Marmalil theme packages",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["wordpress", "themes"],
+  "author": "Manning Hitchings",
+  "license": "MIT",
+  "private": true,
+  "browserslist": [
+    "defaults"
+  ]
 }
