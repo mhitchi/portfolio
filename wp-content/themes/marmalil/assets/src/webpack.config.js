@@ -1,6 +1,6 @@
 const path = require( 'path' );
 
-const JS_DIR = path.resolve( __dirname, '');
+const JS_DIR = path.resolve( __dirname, '/src/js');
 
 const entry = {
     main:
